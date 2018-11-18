@@ -32,7 +32,9 @@ href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384
   <div class="header_bottom">
     <div class="header_column">
       <span class="header_text">
-        <i class="fa fa-chevron-left fa-lg"></i>
+        <a href="chats.html">
+          <i class="fa fa-chevron-left fa-lg"></i>
+        </a>
       </span>
     </div>
     <div class="header_column">
@@ -46,5 +48,41 @@ href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384
   </div>
 
 </header>
+
+<main class="chat">
+  <div class="date-divider"><!--날짜표시-->
+    <span class="date-divider__text">Wednesday, August 2, 2017</span>
+  </div>
+  <div class="chat-message chat__message-from-me"><!--진짜 메세지부분 (내가보낸거)-->
+    <span class="chat__message-time">17:55</span>
+    <span class="chat__message-body">
+      Hello! This is a test message.
+    </span>
+  </div>
+
+  <div class="chat-message chat__message-to-me"><!--진짜 메세지부분 (LYNN이보낸거)-->
+    <img src="images/avatar.png" class="chat__message-avatar">
+      <div class="chat__message-center">
+        <h3 class="chat__message-username">Lynn</h3>
+        <span class="chat__message-body">
+          And this is an answer.
+        </span>
+      </div>
+    <span class="chat__message-time">19:30</span>
+    <!--내가보낸부분이랑 span부분이 순서가 반대로 되있음-->
+  </div>
+</main>
+
+<div class="type message"><!--채팅치는부분-->
+  <i class="fa fa-plus fa-2x"></i><!--플러스아이콘-->
+  <div class="type-messeage__input"><!--메세지치는부분-->
+    <input type="text">
+    <i class="fa fa-smile"></i>
+    <span class="record-messeage"><!--마이크아이콘-->
+      <i class="fas fa-microphone"></i>
+  </span>
+  </div>
+</div>
+
 </body>
 </html>
