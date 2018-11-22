@@ -1,0 +1,35 @@
+.tav-bar {
+  background-color: #f7f7f7;
+  position: fixed; /*항상 그자리에 있는 위치 고정*/
+  width: 100%; /*폭을 100%로 보이게끔 안해놓으면 쭈그러든다*/
+  bottom: 0; /*바닥에 붙어있어라*/
+  display: flex; /*표시 : 유연성이라는 뜻*/
+  justify-content: space-between; /*정당화-내용: 공간-사이에*/
+  /*tab-bar_tab으로 묶인 애들 네덩어리 걔네 사이에 동등한 공간을 주어 나누는 것*/
+  padding: 10px 30px 5px 30px;
+  border-top: 1px solid #c1c1c1;
+}
+
+.tav-bar .tab-bar_tab {
+  display: flex;
+  align-items: center; /*맞춤-항목*/
+  flex-direction: column; /*플렉스-방향: 열*/
+  text-decoration: none; /*꾸미기효과: 없앰, 쓸데없는 밑줄같은거 지움*/
+  color: #c1c1c1;
+}
+
+.tav-bar .tab-bar_tab i {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.tav-bar .tab-bar_title {
+  font-size: 10px;
+}
+
+.tav-bar .tab-bar_tab--selected {
+  color: #523737;
+} /*선택된 아이콘은 색상 변경*/
+/*tab-bar_tab tab-bar_tab--selected이 클래스명인데
+왜 tab-bar_tab--selected만 들어가는지 모르겠음 */

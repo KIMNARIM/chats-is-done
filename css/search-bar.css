@@ -1,0 +1,36 @@
+.search-bar {
+  padding: 10px 25px;
+  position: relative; /*'관련있는'이라는 뜻*/
+  /*.search-bar i 포지션 absolute의 기준*/
+}
+
+.search-bar input:focus {
+  outline: none;
+} /*선택될경우에 효과설정*/
+/*선택하면 원래 파란색 띠가 생겼는데 그걸 없앰*/
+
+.search-bar input {
+  width: 100%;
+  padding: 5px 7px;
+  box-sizing: border-box; /*따로 설명안하고
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  링크로 달았는데 뭔말인지 모르겠음*/
+  border: 0;
+  border-radius: 5px; /*모서리 둥글게*/
+  background-color: #f1f2f3;
+  font-size: 13px;
+  text-align: center;
+}
+
+.search-bar i {
+  position: absolute; /*'완전한'이라는 뜻'*/
+  /*search-bar의 포지션 relative에 상대적으로 포지션을 잡는것
+  relative포지션이 없을 경우, absolute는 문서의 본문 body에
+  맞춰 포지션을 잡을 것이다.
+  absolute포지션을 부모 element에 상대적으로 사용하려면
+  부모element에게 relative포지션을 먼저 설정해줘야 한다.
+  그게 설정되면 차일드element는 부모 element안에 위치할거다.*/
+  color: #bbbbbb;
+  top: 15px;
+  left: 40px;
+}

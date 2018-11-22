@@ -1,0 +1,53 @@
+.chats .chats__list {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.chats__list .chats_chat {
+  padding: 15px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.chats__list .chats_chat:last-child {
+  border: none;
+} /*마지막 채팅리스트는 보더없음표시*/
+
+.chats_chat .chat__content img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.chats__list .chats_chat a {
+  display: flex; /*날짜만 오른쪽으로 가는 이유는
+  왼쪽사람부분이<div class="chat__content">로 묶여있기때문*/
+  justify-content: space-between; /*정당화-내용: 공간-사이에*/
+  /* 왼쪽사람부분인<div class="chat__content">와
+  오른쪽날짜부분인<span class="chat__date-time">
+   걔네 사이에 동등한 공간을 주어 나누는 것
+   따라서 각자 맨왼쪽과 맨오른쪽으로 붙게되는것
+   날짜가 맨 오른쪽으로 간다.*/
+  text-decoration: none;
+  color: inherit; /*색상을 부모에게서 물려받기,(검정색)*/
+}
+
+.chats_chat .chat__content {
+  display: flex; /*block상태(옆에 다른 element위치 허용)를 벗어난다*/
+  align-items: flex-start; /*flex가 되면 이미지가 찌그러지는걸 막아줌*/
+  /*center이랑 뭐가 다른지 잘모르겠음, 조금 더 위쪽에 위치하게 나오긴함*/
+}
+
+.chat__preview .chat__user {
+  font-weight: 600; /*폰트 굵기*/
+  margin-bottom: 5px;
+}
+
+.chat__preview .chat__last-massage {
+  color: #b4b4b4;
+  font-size: 11px;
+}
+
+.chats_chat .chat__date-time {
+  font-size: 11px;
+  color: #b4b4b4;
+}

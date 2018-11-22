@@ -1,0 +1,49 @@
+.top-header {
+  background-color: #523737;
+  color: white;
+  padding: 5px 10px 15px 10px; /*상태바인 top-header부분의 border을 기준으로 content 사이의 빈공간 padding을 조절 */
+  position: fixed; /*힝상 그자리로 위치고정*/
+  width: 100%; /*폭을 100%로 안하면 쭈그러들음*/
+  top: 0; /*top-header부분은 위에 고정이 된 상태로
+  top-header과 main과의 거리를 떨어뜨리기 위해*/
+} /*전체적인 배경이랑 글씨색깔 변경*/
+
+.top-header .header_top,
+ .top-header .header_bottom
+ /*와이파이 있는 상태바*/ {
+  display: flex; /*표시 : 유연성이라는 뜻*/
+  justify-content: space-between; /*정당화-내용: 공간-사이에*/
+  /*column으로 묶인 애들 세덩어리 걔네 사이에 동등한 공간을 주어 나누는 것*/
+} /*top-header로 안묶고 굳이 header_top, header_bottom으로 나눈이유
+위에것과 아래것 각자 구분하여 정렬하기 위해서*/
+
+.top-header .header_top {
+  margin-bottom: 15px;
+  font-size: 12px;
+} /*top애들이랑 bottom애들이랑 margin으로 거리를 두려고 함*/
+
+.top-header .header_bottom {
+  margin: 0 /*상하*/ 10px /*좌우*/; /*두개만 쓸 경우 (상하) (좌우)를 나타냄*/
+} /*bottom이 top보다 margin으로 위치 조정이 필요한 것 같아서 조정함*/
+
+.top-header .header_column {
+  width: 33%;
+} /*각 column마다 크기조절 해주기 위해 width으로 조절했는데
+한줄에 column이 세개니까 100을 3으로 나누면 33%란다 그래서 33%로 정함
+근데 전체적인 글씨크가 자체나 장평??그런게 조절되는건 아니고 그냥 볼록으로써
+글씨를 담은 상자가 부피가 조절되는 느낌임*/
+
+.top-header .header_column:last-child {
+  text-align: right;
+} /*각 column마다 크기를 조절해줬는데 오른쪽 끝에 있는 column이 오른쪽으로 상자가 커져서
+위치가 별로라 오른쪽에 있는 column만 오른쪽 위치로 바꿔줬다.
+제일 마지막에 있는 column이란 뜻으로 last-child임 second-child은 안됨 first-child은 모르겠음*/
+
+.top-header .header_column:nth-child(2) {
+  text-align: center;
+} /*가운데 있는 column애들을 가운데 조정해주고 싶은데 second-child라는 방법은 없으므로
+nth-child(?)로 설정해줌 */
+
+.top-header .header_number {
+  color: yellow;
+} /*상태바 부분 friends 옆의 숫자 색 변경*/

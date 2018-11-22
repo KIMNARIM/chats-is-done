@@ -1,0 +1,11 @@
+body {
+  font-family: "Open Sans", sans-serif; /*글씨체설정*/
+  padding-top: 60px; /*여기다 그냥 padding의 윗부분을
+  조절해준다는 것은 body, 즉 top-header부분 전부부터의
+  padding을 조절해준다는 것을 뜻함 그래서 header.css의
+  top-header부분을 top: 0;(위에 붙어있으라는 뜻)로 조절해주지않으면
+  top-header부분 전체에 padding 값이 들어가서 전체적으로 내려가버린다
+  우리가 원하는 것은 top-header부분과 nav부분은 상단과 하단에
+  고정이 된 상태로 main부분과의 padding값만 조절하기를 원한다.*/
+  padding-bottom: 60px;
+}
